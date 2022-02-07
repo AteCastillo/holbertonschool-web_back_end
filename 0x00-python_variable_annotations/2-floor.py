@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Write a function which takes a float n as argument and returns the floor of the float
+Write a function which takes a float as argument and returns the floor
 """
 
 
