@@ -9,4 +9,3 @@ def concat(a: str, b: str) -> str:
     a function to concat strings
     """
     return (a + b)
-    
