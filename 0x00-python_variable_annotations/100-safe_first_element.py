@@ -7,7 +7,7 @@ from typing import Sequence, Union, Any
 
 def safe_first_element(lst: Sequence[Any]) -> Union[Any, None]:
     """
-    annotated function that return values with appropriate types
+    return values with appropriate types
     """
     if lst:
         return lst[0]
