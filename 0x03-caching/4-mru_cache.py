@@ -7,7 +7,7 @@ from collections import OrderedDict
 from base_caching import BaseCaching
 
 
-class LRUCache(BaseCaching):
+class MRUCache(BaseCaching):
     """ child class inherits from basecaching, fifo"""
     def __init__(self):
         self.cache_data = OrderedDict()
@@ -18,8 +18,8 @@ class LRUCache(BaseCaching):
             self.cache_data[key] = item
             self.cache_data.move_to_end(key)
             if len(self.cache_data) > self.MAX_ITEMS:
-                pop_key = self.cache_data.popitem(last=False)
-                print("DISCARD: {}".format(str(pop_key[0])))
+                pop_key = self.cache_data.popitem()
+                print("DISCARD: {}".format(str(pop_key[-2])))
 
     def get(self, key):
         """ Get an item by key
