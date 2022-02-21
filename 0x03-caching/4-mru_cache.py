@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Caching
+child class inherits from basecaching
 """
 
 from collections import OrderedDict
@@ -8,7 +8,9 @@ from base_caching import BaseCaching
 
 
 class MRUCache(BaseCaching):
-    """ child class inherits from basecaching, fifo"""
+    """
+    child class inherits from basecaching
+    """
     def __init__(self):
         self.cache_data = OrderedDict()
 
@@ -22,7 +24,8 @@ class MRUCache(BaseCaching):
                 print("DISCARD: {}".format(str(pop_key[-2])))
 
     def get(self, key):
-        """ Get an item by key
+        """
+        Get an item by key
         """
         if key is None or key not in self.cache_data:
             return (None)

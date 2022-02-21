@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Caching
+child class inherits from basecaching, fifo
 """
 
 from collections import OrderedDict
@@ -8,7 +8,9 @@ from base_caching import BaseCaching
 
 
 class LRUCache(BaseCaching):
-    """ child class inherits from basecaching, fifo"""
+    """
+    child class inherits from basecaching, fifo
+    """
     def __init__(self):
         self.cache_data = OrderedDict()
 
