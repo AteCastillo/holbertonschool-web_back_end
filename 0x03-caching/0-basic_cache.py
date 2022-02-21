@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Caching
+Create a class BasicCache that inherits from BaseCaching
 """
 from base_caching import BaseCaching
 
