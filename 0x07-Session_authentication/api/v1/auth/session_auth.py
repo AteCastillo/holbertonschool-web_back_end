@@ -46,15 +46,6 @@ class SessionAuth(Auth):
 
     def destroy_session(self, request=None):
         """
-        delete user session
+        delete session
         """
-        if request is None:
-            return False
-        sesh_id = self.session_cookie(request)
-        if sesh_id is None:
-            return False
-        if self.user_id_for_session_id(sesh_id) is None:
-            return False
-
-        del self.user_id_by_session_id[sesh_id]
-        return True
+        
